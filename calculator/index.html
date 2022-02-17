@@ -18,9 +18,9 @@
     <div class="screen">
       <div class="content">
         <div class="sm-num"></div>
-        <div class="bg-num">1,258.2</div>
-        <button class="key c">C</button>
-        <button class="key del">
+        <div id="display" class="bg-num"></div>
+        <button onclick="cancel()" class="key c">C</button>
+        <button onclick="remove()" class="key del">
           <svg
             width="33"
             height="32"
@@ -36,23 +36,32 @@
             />
           </svg>
         </button>
-        <button class="key op divide">÷</button>
-        <button class="key">7</button>
-        <button class="key">8</button>
-        <button class="key">9</button>
-        <button class="key op product">×</button>
-        <button class="key">4</button>
-        <button class="key">5</button>
-        <button class="key">6</button>
-        <button class="key op sub">–</button>
-        <button class="key">1</button>
-        <button class="key">2</button>
-        <button class="key">3</button>
-        <button class="key op plus">+</button>
-        <button class="key zero">0</button>
-        <button class="key op equal">=</button>
+        <button id="div" onclick="operate(this.id)" class="key op divide">
+          ÷
+        </button>
+        <button id="7" onclick="entNum(this.id)" class="key">7</button>
+        <button id="8" onclick="entNum(this.id)" class="key">8</button>
+        <button id="9" onclick="entNum(this.id)" class="key">9</button>
+        <button id="multi" onclick="operate(this.id)" class="key op product">
+          ×
+        </button>
+        <button id="4" onclick="entNum(this.id)" class="key">4</button>
+        <button id="5" onclick="entNum(this.id)" class="key">5</button>
+        <button id="6" onclick="entNum(this.id)" class="key">6</button>
+        <button id="sub" onclick="operate(this.id)" class="key op sub">
+          –
+        </button>
+        <button id="1" onclick="entNum(this.id)" class="key">1</button>
+        <button id="2" onclick="entNum(this.id)" class="key">2</button>
+        <button id="3" onclick="entNum(this.id)" class="key">3</button>
+        <button id="sum" onclick="operate(this.id)" class="key op plus">
+          +
+        </button>
+        <button id="0" onclick="entNum(this.id)" class="key zero">0</button>
+        <button id="" onclick="equal()" class="key op equal">=</button>
       </div>
     </div>
     <!-- /.display -->
+    <script src="main.js"></script>
   </body>
 </html>
